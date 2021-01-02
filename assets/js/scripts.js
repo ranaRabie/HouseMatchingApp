@@ -110,6 +110,34 @@ function Owls(){
             }
         });
     }
+    if($('#team-carousel').hasClass('owl-carousel')){
+        $('#team-carousel.owl-carousel').owlCarousel({
+            rtl: rtlCheck,
+            items:5,
+            lazyLoad:true,
+            loop:false,
+            margin:10,
+            dots: false,
+            nav: true,
+            autoplay:true,
+            autoplayTimeout:2500,
+            autoplayHoverPause:true,
+            responsive:{
+                0:{
+                    items:2
+                },
+                768:{
+                    items:3
+                },
+                992:{
+                    items:4
+                },
+                1200:{
+                    items: 5,
+                }
+            }
+        });
+    }
 }
 
 $(window).on('scroll', function(){

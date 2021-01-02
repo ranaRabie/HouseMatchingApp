@@ -156,6 +156,9 @@ h5{font-size: 1rem;font-weight: 600;}
 #newsletter-blk .form-control, #newsletter-blk .form-control::placeholder{color: #fff;font-size: 1rem;}
 
 /* Team */
+#team-blk{position: relative;background: url(../images/shape-blue1.png) no-repeat right 95%;background-size: 80px auto;}
+#team-blk:before{content:"";position: absolute;width:30px;height:78px;top:30px;left:20px;background: url(../images/shape-pink.png) no-repeat 0 0;background-size: contain;}
+
 #team-carousel .owl-nav{display: block;text-align: center;}
 .team-item{text-align: center;text-transform: capitalize;font-weight: 500;}
 .team-item .team-member-img{margin-bottom: 1rem;}
@@ -168,6 +171,30 @@ h5{font-size: 1rem;font-weight: 600;}
 .feature-item .feature-ico img{width: 45px;}
 .feature-item h5{text-transform: capitalize;}
 .feature-item p{font-size: .8rem;}
+
+/* Contact */
+.contact-info-item{text-align: center;padding: 2rem 1rem;}
+#contact-info-blk .row > div:nth-child(1) .contact-info-item{background-color: rgba(0,102,255 , 0.05);}
+#contact-info-blk .row > div:nth-child(2) .contact-info-item{background-color: rgba(250,65,78 , 0.05);}
+#contact-info-blk .row > div:nth-child(3) .contact-info-item{background-color: rgba(15,153,109 , 0.05);}
+
+#contact-info-blk .row > div:nth-child(1) .contact-info-item p{color: rgba(0,102,255 , 1);}
+#contact-info-blk .row > div:nth-child(2) .contact-info-item p{color: rgba(250,65,78 , 1);}
+#contact-info-blk .row > div:nth-child(3) .contact-info-item p{color: rgba(15,153,109 , 1);}
+
+
+.contact-info-item img{height: 40px;width:auto;margin-bottom: 1rem;}
+.contact-info-item h5{text-transform: capitalize;font-size:.9rem;}
+.contact-info-item p{font-size: .8rem;}
+
+#contact-form-blk{position: relative;background: url(../images/shape-blue1.png) no-repeat right 95%;background-size: 80px auto;}
+#contact-form-blk:before{content:"";position: absolute;width:30px;height:78px;top:30px;left:20px;background: url(../images/shape-pink.png) no-repeat 0 0;background-size: contain;}
+
+#map iframe{width:100%;height:400px;}
+
+/* Forms */
+textarea{resize: none;height: 100px;}
+.form-control{border-radius: 1px;}
 
 /* Footer */
 .footer-brand{height: 50px;display:block;margin-bottom: 1rem}

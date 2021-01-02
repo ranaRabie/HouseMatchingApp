@@ -1,0 +1,99 @@
+// Your variable overrides
+$body-bg: #FFF;
+$body-color: #000;
+$light-blue: rgba(231, 239, 250, 1);
+
+$theme-colors: (
+  "primary": #0066FF,
+  "secondary": #EE4957,
+  "dark": rgba(34, 45, 57, 1),
+  "white": #FFF,
+  "light": rgba(249, 249, 255, 1),
+
+);
+
+$transition: (
+  main: all 0.5s ease
+);
+
+// Bootstrap and its default variables
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+::-moz-selection{color: gray("100");background: theme-color("dark");}
+::selection {color: gray("100");background: theme-color("dark");}
+::-webkit-scrollbar-track {background: gray("200");}
+::-webkit-scrollbar-thumb {
+    background: gray("500");
+    &::-webkit-scrollbar-thumb:hover {
+        background: gray("600");
+    }
+}
+
+/* Generals */
+#header-wrap.header-fixed{background:$white;}
+
+#navbar-toggler-lnk span{background-color: theme-color(primary);}
+
+.dropdown-list{background-color: $white;}
+.dropdown-list li a{
+    color: gray("900");
+    &:hover{
+        color: theme-color(primary);
+        background-color: gray("100");
+    }
+}
+
+.nav-item {
+  .nav-link {
+    color: $black !important;
+    &::after{
+      background-color: theme-color(primary);
+    }
+  }
+  &.active  .nav-link:after,
+  :active .nav-link:after{
+    width:25px;
+  }
+  &:hover .nav-link{
+    color: theme-color(primary) !important;
+  }
+}
+
+.owl-nav button{
+  background-color: $light-blue!important;
+  color: theme-color-level(primary, 1)!important;
+  &:hover{
+    background-color: theme-color-level(primary, 1)!important;
+    color: $light-blue!important;
+  }
+}
+
+@media (max-width: 991.98px) {
+    .navbar-nav{background-color: theme-color(primary);}
+    .nav-item {
+      .nav-link {
+        color: $white !important;   
+      }
+      &:hover .nav-link{
+        color: $white !important;
+      }
+    }
+}
+
+p{color: theme-color(dark);}
+.footer-wrap{
+  color: theme-color(dark);
+  a{
+    color :theme-color(dark);
+    &:hover{
+      color: theme-color(primary);
+    }
+  }
+}
+
+a, .btn:before, .nav-item .nav-link:after,
+#header-wrap,
+#header-wrap.header-fixed .navbar-brand,
+#header-wrap.header-fixed .navbar-brand img{
+  transition: map_get($transition, main);
+}

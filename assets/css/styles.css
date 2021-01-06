@@ -208,6 +208,48 @@ h5{font-size: 1rem;font-weight: 600;}
 
 #map iframe{width:100%;height:400px;}
 
+.btn[type="submit"]{position: relative;}
+#submit-loader{
+    position: absolute;top:0;left:0;width:100%;height:100%;background-color: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;opacity: 0;
+}
+[class*=loader-] {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    color: inherit;
+    vertical-align: middle;
+    pointer-events: none;
+  }
+  .loader-03 {
+    border: 0.2em solid currentcolor;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    -webkit-animation: 1s loader-03 linear infinite;
+            animation: 1s loader-03 linear infinite;
+    position: relative;
+  }
+  
+  @-webkit-keyframes loader-03 {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes loader-03 {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
 /* Forms */
 textarea{resize: none;height: 100px;}
 .form-control{border-radius: 1px;}
